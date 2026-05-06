@@ -12,6 +12,8 @@ function getSheet() {
     sheet = ss.insertSheet(SHEET);
     sheet.appendRow(COLS);
     sheet.setFrozenRows(1);
+  } else {
+    sheet.getRange(1, 1, 1, COLS.length).setValues([COLS]);
   }
   return sheet;
 }

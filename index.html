@@ -166,16 +166,32 @@ input[type=password]:focus{border-color:#FFB700;}
     </div>
     <div class="card" id="chart-card" style="display:none">
       <div class="section-title">📊 Earnings Overview</div>
-      <div class="stats-row two">
-        <div class="stat-card" style="border-left:4px solid #4A7ADB">
-          <div class="stat-label">🎮 Game Time</div>
-          <div class="stat-val" id="ov-game" style="color:#4A7ADB">0</div>
-          <div class="stat-unit">minutes earned</div>
+      <div id="ov-kid-view">
+        <div class="stats-row two">
+          <div class="stat-card" style="border-left:4px solid #4A7ADB">
+            <div class="stat-label">✌︎㋡ Game Time</div>
+            <div class="stat-val" id="ov-game" style="color:#4A7ADB">0</div>
+            <div class="stat-unit">minutes earned</div>
+          </div>
+          <div class="stat-card" style="border-left:4px solid #3DBE8A">
+            <div class="stat-label">💰 Money</div>
+            <div class="stat-val" id="ov-money" style="color:#3DBE8A">€0.00</div>
+            <div class="stat-unit">euros earned</div>
+          </div>
         </div>
-        <div class="stat-card" style="border-left:4px solid #3DBE8A">
-          <div class="stat-label">💰 Money</div>
-          <div class="stat-val" id="ov-money" style="color:#3DBE8A">€0.00</div>
-          <div class="stat-unit">euros earned</div>
+      </div>
+      <div id="ov-all-view" style="display:none">
+        <div class="chart-wrap">
+          <div class="chart-box">
+            <div class="chart-title">✌︎㋡ Game Time by Kid</div>
+            <svg id="pie-game" width="140" height="140" viewBox="-70 -70 140 140" style="overflow:visible"></svg>
+            <div class="legend" id="legend-game"></div>
+          </div>
+          <div class="chart-box">
+            <div class="chart-title">💰 Money by Kid</div>
+            <svg id="pie-money" width="140" height="140" viewBox="-70 -70 140 140" style="overflow:visible"></svg>
+            <div class="legend" id="legend-money"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -211,11 +227,11 @@ input[type=password]:focus{border-color:#FFB700;}
 
 <script>
 // ── CONFIG — fill these in before using ─────────────────────────────────────
-// scriptUrl: Apps Script → Deploy → Copy the /exec URL
-// parentPassword: choose your own password for the Parent login
+// scriptUrl: https://script.google.com/macros/s/AKfycbwGPTdwcU63OI5ZtLczRj2QFef7mbopuK71gg7mvcGiNujjMAN8nF0LgRBj4Tom6NYrpg/exec
+// parentPassword: parent123
 const CONFIG = {
-  scriptUrl:      "YOUR_APPS_SCRIPT_EXEC_URL",
-  parentPassword: "YOUR_PARENT_PASSWORD"
+  scriptUrl:      "https://script.google.com/macros/s/AKfycbwGPTdwcU63OI5ZtLczRj2QFef7mbopuK71gg7mvcGiNujjMAN8nF0LgRBj4Tom6NYrpg/exec",
+  parentPassword: "parent123"
 };
 
 const DEFAULT_CFG = {
@@ -296,7 +312,7 @@ function esc(s) {
 function taskFor(key) { return CFG.tasks.find(t => t.key === key) || {emoji:"📝", game_minutes:15, amount:0, name:key}; }
 
 function gameBadge(n) {
-  return n ? `<span class="session-badge">🎮 ${n} min</span>` : "";
+  return n ? `<span class="session-badge">✌︎㋡ ${n} min</span>` : "";
 }
 
 function sum(arr, status) {
@@ -362,7 +378,7 @@ function showKid() {
       <div class="task-emoji">${t.emoji}</div>
       <div class="task-name">${esc(t.name)}</div>
       ${t.amount > 0 ? `<div class="task-amt">+€${t.amount.toFixed(2)}</div>` : ""}
-      ${t.game_minutes > 0 ? `<div class="task-sessions">🎮 ${t.game_minutes} min</div>` : ""}
+      ${t.game_minutes > 0 ? `<div class="task-sessions">✌︎㋡ ${t.game_minutes} min</div>` : ""}
     </button>`
   ).join("");
   loadKid();
@@ -385,7 +401,7 @@ async function addTask(key, name, amount) {
   };
   try {
     await api({ action: "add", data: JSON.stringify(entry) });
-    toast(`Added: ${name}${amount > 0 ? " +€" + amount.toFixed(2) : ""}${t.game_minutes > 0 ? " 🎮 " + t.game_minutes + " min" : ""}`);
+    toast(`Added: ${name}${amount > 0 ? " +€" + amount.toFixed(2) : ""}${t.game_minutes > 0 ? " ✌︎㋡ " + t.game_minutes + " min" : ""}`);
     loadKid();
   } catch (e) { toast("Error: " + e.message, "err"); }
 }
@@ -509,11 +525,52 @@ function buildCharts(entries) {
   const card = document.getElementById("chart-card");
   if (!entries.length) { card.style.display = "none"; return; }
   card.style.display = "block";
-  const approved = entries.filter(e => e.status === "approved");
-  const totalMins  = approved.reduce((s, e) => s + (+e.game_minutes || 0), 0);
-  const totalMoney = approved.reduce((s, e) => s + (+e.amount_eur   || 0), 0);
-  document.getElementById("ov-game").textContent  = totalMins;
-  document.getElementById("ov-money").textContent = "€" + totalMoney.toFixed(2);
+
+  if (S.tab === "all") {
+    document.getElementById("ov-kid-view").style.display = "none";
+    document.getElementById("ov-all-view").style.display = "block";
+    const gameData  = CFG.kids.map(k => ({
+      n: `${k.emoji} ${k.name}`,
+      v: entries.filter(e => e.kid_id === k.id).reduce((s, e) => s + (+e.game_minutes || 0), 0)
+    })).filter(d => d.v > 0);
+    const moneyData = CFG.kids.map(k => ({
+      n: `${k.emoji} ${k.name}`,
+      v: entries.filter(e => e.kid_id === k.id).reduce((s, e) => s + (+e.amount_eur || 0), 0)
+    })).filter(d => d.v > 0);
+    drawPie("pie-game",  "legend-game",  gameData,  false);
+    drawPie("pie-money", "legend-money", moneyData, true);
+  } else {
+    document.getElementById("ov-kid-view").style.display = "block";
+    document.getElementById("ov-all-view").style.display = "none";
+    const kidEntries = entries.filter(e => e.kid_id === S.tab);
+    const totalMins  = kidEntries.reduce((s, e) => s + (+e.game_minutes || 0), 0);
+    const totalMoney = kidEntries.reduce((s, e) => s + (+e.amount_eur   || 0), 0);
+    document.getElementById("ov-game").textContent  = totalMins;
+    document.getElementById("ov-money").textContent = "€" + totalMoney.toFixed(2);
+  }
+}
+
+function drawPie(svgId, legId, data, isMoney) {
+  const svg = document.getElementById(svgId), leg = document.getElementById(legId);
+  if (!data.length) {
+    svg.innerHTML = '<text y="5" text-anchor="middle" fill="#ccc" font-size="11">No data</text>';
+    leg.innerHTML = ""; return;
+  }
+  const tot = data.reduce((s, d) => s + d.v, 0);
+  const R = 60;
+  let ang = -Math.PI / 2, paths = "";
+  data.forEach((d, i) => {
+    const sw = (d.v / tot) * 2 * Math.PI;
+    const x1 = R * Math.cos(ang), y1 = R * Math.sin(ang);
+    ang += sw;
+    const x2 = R * Math.cos(ang), y2 = R * Math.sin(ang);
+    paths += `<path d="M0,0 L${x1.toFixed(2)},${y1.toFixed(2)} A${R},${R} 0 ${sw > Math.PI ? 1 : 0},1 ${x2.toFixed(2)},${y2.toFixed(2)} Z"
+      fill="${COLORS[i % COLORS.length]}" stroke="#fff" stroke-width="2"/>`;
+  });
+  svg.innerHTML = paths;
+  leg.innerHTML = data.map((d, i) =>
+    `<div class="legend-item"><div class="legend-dot" style="background:${COLORS[i % COLORS.length]}"></div><span>${esc(d.n)}: ${isMoney ? "€" + d.v.toFixed(2) : d.v + " min"}</span></div>`
+  ).join("");
 }
 
 // ── ADMIN ─────────────────────────────────────────────────────────────────────
