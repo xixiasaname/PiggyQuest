@@ -52,6 +52,7 @@ Open `index.html` directly in a browser — no build step or server needed.
 <img width="1883" height="837" alt="image" src="https://github.com/user-attachments/assets/0977c4a6-88fa-4412-baab-75c0ef60b721" />
 
 
+
 - 🐯 Kids:
 - Log in → pick a chore from the task grid
 - Earn coins and game time per task
@@ -60,12 +61,14 @@ Open `index.html` directly in a browser — no build step or server needed.
 <img width="1727" height="881" alt="image" src="https://github.com/user-attachments/assets/f47e8cb0-e3e8-4a0e-9054-d8f53d5048fb" />
 
 
+
 - 👑 Parent (Admin):
 - Approve or delete pending chore entries
 - View earnings summary per kid and total, with charts
 <img width="1878" height="863" alt="image" src="https://github.com/user-attachments/assets/ed8452e8-3983-41f5-992f-3d9d064782b8" />
 <img width="1877" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ae390a-e0e7-4083-96af-340a3ae24554" />
 <img width="1872" height="903" alt="image" src="https://github.com/user-attachments/assets/060822f9-8d72-461f-96c2-65e3e3fa8349" />
+
 
 - 📊 Google Sheets backend:
 - All data stored in real time in your own Google Sheet — no server, no subscription
