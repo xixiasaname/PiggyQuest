@@ -48,8 +48,9 @@ Open `index.html` directly in a browser — no build step or server needed.
 ## Demo
 -Parent (Admin view)
 <img width="1870" height="919" alt="image" src="https://github.com/user-attachments/assets/9b531a92-474d-44f8-bb1e-fb8541e0af1d" />
-<img width="1883" height="837" alt="image" src="https://github.com/user-attachments/assets/0977c4a6-88fa-4412-baab-75c0ef60b721" />
 <img width="1855" height="965" alt="image" src="https://github.com/user-attachments/assets/fda51048-3e8f-4d25-8512-4824061b0c5f" />
+<img width="1883" height="837" alt="image" src="https://github.com/user-attachments/assets/0977c4a6-88fa-4412-baab-75c0ef60b721" />
+- Kid View
 <img width="1869" height="929" alt="image" src="https://github.com/user-attachments/assets/32843693-4a1f-4e6b-8d24-59feb87e057f" />
 <img width="1727" height="881" alt="image" src="https://github.com/user-attachments/assets/f47e8cb0-e3e8-4a0e-9054-d8f53d5048fb" />
 <img width="1878" height="863" alt="image" src="https://github.com/user-attachments/assets/ed8452e8-3983-41f5-992f-3d9d064782b8" />
