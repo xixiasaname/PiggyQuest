@@ -46,8 +46,8 @@ Open `index.html` directly in a browser — no build step or server needed.
 - The parent password lives in `index.html`; kid passwords are managed via the Admin panel and stored in your Google Sheet's `config` tab
 
 ## Demo
+-Parent (Admin view)
 <img width="1870" height="919" alt="image" src="https://github.com/user-attachments/assets/9b531a92-474d-44f8-bb1e-fb8541e0af1d" />
-<img width="1878" height="512" alt="image" src="https://github.com/user-attachments/assets/839db188-c20a-48c7-9cc4-bba3d2b0082c" />
 <img width="1883" height="837" alt="image" src="https://github.com/user-attachments/assets/0977c4a6-88fa-4412-baab-75c0ef60b721" />
 <img width="1855" height="965" alt="image" src="https://github.com/user-attachments/assets/fda51048-3e8f-4d25-8512-4824061b0c5f" />
 <img width="1869" height="929" alt="image" src="https://github.com/user-attachments/assets/32843693-4a1f-4e6b-8d24-59feb87e057f" />
