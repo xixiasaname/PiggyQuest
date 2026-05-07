@@ -53,7 +53,7 @@ Open `index.html` directly in a browser — no build step or server needed.
 - Log in → pick a chore from the task grid
 - Earn coins and game time per task
 - Wait for parent approval
-  <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(1)" src="https://github.com/user-attachments/assets/93324b44-b895-441a-ad8b-7afb382bc7ba" />
+<img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(1)" src="https://github.com/user-attachments/assets/93324b44-b895-441a-ad8b-7afb382bc7ba" />
 
 - 👑 Parent (Admin):
 - Approve or delete pending chore entries
