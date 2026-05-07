@@ -47,6 +47,8 @@ Open `index.html` directly in a browser — no build step or server needed.
 
 ## How It Works
 - 👑 Parent (Admin): Log in → **Admin panel**: add/edit kids, tasks, emojis and rewards
+  <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/3340eaf3-0e2e-4134-a652-1a99a5211857" />
+
 <img width="1870" height="919" alt="image" src="https://github.com/user-attachments/assets/9b531a92-474d-44f8-bb1e-fb8541e0af1d" />
 <img width="1855" height="965" alt="image" src="https://github.com/user-attachments/assets/fda51048-3e8f-4d25-8512-4824061b0c5f" />
 <img width="1883" height="837" alt="image" src="https://github.com/user-attachments/assets/0977c4a6-88fa-4412-baab-75c0ef60b721" />
