@@ -53,17 +53,12 @@ Open `index.html` directly in a browser — no build step or server needed.
 - Log in → pick a chore from the task grid
 - Earn coins and game time per task
 - Wait for parent approval
-<img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(1)" src="https://github.com/user-attachments/assets/93324b44-b895-441a-ad8b-7afb382bc7ba" />
+ <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(1)" src="https://github.com/user-attachments/assets/93324b44-b895-441a-ad8b-7afb382bc7ba" />
 
 - 👑 Parent (Admin):
 - Approve or delete pending chore entries
 - View earnings summary per kid and total, with charts
-
-
-<img width="1878" height="863" alt="image" src="https://github.com/user-attachments/assets/ed8452e8-3983-41f5-992f-3d9d064782b8" />
-<img width="1877" height="786" alt="image" src="https://github.com/user-attachments/assets/d4ae390a-e0e7-4083-96af-340a3ae24554" />
-<img width="1872" height="903" alt="image" src="https://github.com/user-attachments/assets/060822f9-8d72-461f-96c2-65e3e3fa8349" />
-
+ <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(1)" src="https://github.com/user-attachments/assets/0102b871-9f44-4f75-925a-185da2965627" />
 
 - 📊 Google Sheets backend:
 - All data stored in real time in your own Google Sheet — no server, no subscription
