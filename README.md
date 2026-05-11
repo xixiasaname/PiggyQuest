@@ -13,6 +13,7 @@ The `index.html` in this repo uses a placeholder. Add your own URL locally.
 A real problem in my household — my kids needed motivation for chores beyond "because I said so." 
 Built in a weekend as a portfolio piece during my career transition into sustainable fintech.
 
+
 # 🏠 Chore Coins 
 
 A simple family chore tracker. Kids log completed chores, parents approve them, earnings are tracked. Backed by Google Sheets — no server needed.
@@ -75,9 +76,9 @@ Open `index.html` directly in a browser — no build step or server needed.
 
 ## How It Works
 - 👑 Parent (Admin): Log in → **Admin panel**: add/edit kids, tasks, emojis and rewards
- <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/3340eaf3-0e2e-4134-a652-1a99a5211857" />
-- Approve or delete pending chore entries
+- - Approve or delete pending chore entries
 - View earnings summary per kid and total, with charts
+ <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/3340eaf3-0e2e-4134-a652-1a99a5211857" />
  <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(2)" src="https://github.com/user-attachments/assets/f2b9028b-2a5c-491b-aafa-90547d1f7f6c" />
 
 
