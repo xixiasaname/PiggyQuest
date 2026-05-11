@@ -76,7 +76,7 @@ Open `index.html` directly in a browser — no build step or server needed.
 
 ## How It Works
 - 👑 Parent (Admin): Log in → **Admin panel**: add/edit kids, tasks, emojis and rewards
-- - Approve or delete pending chore entries
+- Approve or delete pending chore entries
 - View earnings summary per kid and total, with charts
  <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/3340eaf3-0e2e-4134-a652-1a99a5211857" />
  <img width="480" height="1066" alt="Screenrecorder-2026-05-07-06-47-16-656-ezgif com-video-to-gif-converter(2)" src="https://github.com/user-attachments/assets/f2b9028b-2a5c-491b-aafa-90547d1f7f6c" />
@@ -95,9 +95,10 @@ Open `index.html` directly in a browser — no build step or server needed.
 - Allocate available earnings to the goal account
 - Adjust or update goals at any time
 - Once the goal is reached, the funds can be paid out
-<img width="480" height="1066" alt="Screenrecorder-2026-05-11-11-58-37-969_0_COMPRESSED-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/06899965-a146-4dcc-be76-2141eee56f2d" />
 - Any surplus savings beyond the target amount will be transferred back to the available earnings account
 - Available earnings can be withdrawn at any time
+<img width="480" height="1066" alt="Screenrecorder-2026-05-11-11-58-37-969_0_COMPRESSED-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/06899965-a146-4dcc-be76-2141eee56f2d" />
+
 <img width="480" height="1066" alt="Screenrecorder-2026-05-11-11-58-37-969_0_COMPRESSED-ezgif com-video-to-gif-converter(2)" src="https://github.com/user-attachments/assets/749d14e0-e639-4611-9c0f-6549841a7178" />
 
 
