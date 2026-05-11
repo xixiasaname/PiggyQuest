@@ -10,14 +10,15 @@ The `index.html` in this repo uses a placeholder. Add your own URL locally.
 - Vanilla HTML/CSS/JS — zero dependencies, zero build step
 
 ## Why I Built This
-A real problem in my household — my kids needed motivation for chores beyond "because I said so." 
+A real problem in my household — my kids needed motivation for chores by setting personal goals and meaning, beyond 'because mum and dad said so.'
 Built in a weekend as a portfolio piece during my career transition into sustainable fintech.
 
 
-# 🏠 Chore Coins 
+# 🏠 Chore Coins amd Time Vouchers
 
-A simple family chore tracker. Kids log completed chores, parents approve them, earnings are tracked. Backed by Google Sheets — no server needed.
-专为家庭设计的家务追踪应用。孩子完成家务后记录任务，家长审批并发放零花钱和游戏时间奖励。
+A simple family chore tracker. Kids log completed chores, parents approve them. Kids set mid-term saving goals or decide direct withdrawl. Earnings and withdrawl are tracked. 
+Kids can also log extracruricular activities to earn time vouchers. Backed by Google Sheets — no server needed.
+专为家庭设计的家务追踪应用。孩子完成家务后记录任务，家长审批并发放零花钱和游戏时间奖励。孩子可以设立中期储蓄目标或选择直接提取劳动所得。 孩子培养良好持续的学习习惯，也可以通过time voucher来奖励。
 
 
 ## Setup
