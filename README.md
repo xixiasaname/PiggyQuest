@@ -107,11 +107,15 @@ Open `index.html` directly in a browser — no build step or server needed.
 - All data stored in real time in your own Google Sheet — no server, no subscription
 - Works across devices: kids log on laptop, parent approves on phone
 - Full data visible and editable directly in the spreadsheet
+  
 chore entries
-<img width="1157" height="249" alt="image" src="https://github.com/user-attachments/assets/227c1e9d-d716-4402-a47b-e57d69287c74" />
+<img width="1157" height="249" alt="image" src="https://github.com/user-attachments/assets/227c1e9d-d716-4402-a47b-e57d69287c74" /> 
 goals tab
+
 <img width="760" height="167" alt="image" src="https://github.com/user-attachments/assets/42423527-dd10-409d-bdc0-84e5797b5b1f" />
+
 transactions tab
+
 <img width="527" height="134" alt="image" src="https://github.com/user-attachments/assets/72ccbabd-67f8-4b5c-a680-3e35854e7487" />
 
 
